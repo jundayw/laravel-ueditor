@@ -11,11 +11,12 @@ return [
     'url' => 'ueditor/upload',
     // 路由配置
     'route' => [
+        'namespace' => 'Jundayw\LaravelUEditor',
+        'middleware' => [],
         'as' => 'ueditor.upload',
-        //'middleware' => 'auth',
     ],
     // 上传控制器
-    'controller' => 'Jundayw\LaravelUEditor\UEditorController@upload',
+    'controller' => 'UEditorController@upload',
     // 是否使用 md5 格式文件名
     'hash_filename' => true,
     // 配置

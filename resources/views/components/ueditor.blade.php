@@ -7,8 +7,11 @@
         name="{{ $name ?? 'content' }}"
         style="width:{{ $width ?? '100%' }};height:{{ $height ?? '480px' }};">{{ $slot }}</script>
 <script type="text/javascript">
-    var ueditor = UE.getEditor("{{ $name ?? 'content' }}",{
+    var ueditor = UE.getEditor("{{ $name ?? 'content' }}", {
         serverUrl: '{{ route(config('ueditor.route.as')) }}'
+    });
+    ueditor.ready(function () {
+        ueditor.execCommand('serverparam', '_token', $('meta[name="csrf-token"]').attr('content'));
     });
     //console.log(ueditor.options.serverUrl);
 </script>

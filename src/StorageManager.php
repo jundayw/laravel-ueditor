@@ -295,8 +295,14 @@ class StorageManager
         $upload = config('ueditor.upload');
 
         $prefixes = [
-            'image', 'scrawl', 'snapscreen', 'catcher', 'video', 'file',
-            'imageManager', 'fileManager',
+            'image',
+            'scrawl',
+            'snapscreen',
+            'catcher',
+            'video',
+            'file',
+            'imageManager',
+            'fileManager',
         ];
 
         $config = [];
